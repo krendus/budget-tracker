@@ -1,0 +1,44 @@
+import colors from '@/constants/colorst';
+import fonts from '@/constants/fonts';
+import { HORIZONTAL_PADDING } from '@/constants/sizes';
+import { StyleSheet } from 'react-native';
+
+const styles = StyleSheet.create({
+    input: {
+        height: "100%",
+        borderRadius: 8,
+        paddingHorizontal: HORIZONTAL_PADDING,
+        justifyContent: "center",
+        backgroundColor: colors.inputBackground
+    },
+    inputError: {
+    },
+    inputText: {
+        fontFamily: fonts.manrope.regular
+    },
+    errorText: {
+    },
+    label: {
+        fontFamily: fonts.manrope.medium,
+        fontSize: 14,
+        marginBottom: 8,
+        color: colors.greyOne
+    },
+    inputWrapper: {
+    },
+    inputContainer: {
+        height: 45,
+        position: "relative"
+    },
+    eyeButton: {
+        position: "absolute",
+        top: 2,
+        right: 2,
+        height: 41,
+        width: 41,
+        alignItems: "center",
+        justifyContent: "center"
+    }
+});
+
+export default styles;
