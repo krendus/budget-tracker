@@ -39,6 +39,13 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "f1c5db1d-53d3-4d65-813e-d8b7797c8aa3"
+      }
+    },
+    "owner": "krendus"
   }
 }

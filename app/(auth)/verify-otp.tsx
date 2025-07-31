@@ -1,6 +1,6 @@
 import { resendEmailVerification, verifyEmail } from '@/api/auth'
 import Button from '@/components/button'
-import colors from '@/constants/colorst'
+import colors from '@/constants/colors'
 import fonts from '@/constants/fonts'
 import { HORIZONTAL_PADDING } from '@/constants/sizes'
 import { useUserStore } from '@/store/user.store'

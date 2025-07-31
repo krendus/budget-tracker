@@ -1,4 +1,4 @@
-import colors from '@/constants/colorst';
+import colors from '@/constants/colors';
 import fonts from '@/constants/fonts';
 import { StyleSheet } from 'react-native';
 
@@ -10,8 +10,7 @@ const styles = StyleSheet.create({
         alignItems: "center",
         flexDirection: "row",
         justifyContent: "center",
-        columnGap: 8,
-        flex: 1
+        columnGap: 8
     },
     disabledButton: {
     },

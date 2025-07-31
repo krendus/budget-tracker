@@ -4,7 +4,11 @@ import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import 'react-native-reanimated';
 
+import toastConfig from '@/config/toast';
+import colors from '@/constants/colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
+import { Platform } from 'react-native';
+import Toast from 'react-native-toast-message';
 
 export default function RootLayout() {
   const colorScheme = useColorScheme();
@@ -23,11 +27,15 @@ export default function RootLayout() {
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack>
+        <Stack.Screen name='(auth)' options={{ headerShown: false }}/>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name='(auth)' options={{ headerShown: false }} />
+        <Stack.Screen name="(dashboard)" options={{ headerShown: false }} />
         <Stack.Screen name="+not-found" />
       </Stack>
-      <StatusBar style="auto" />
+      <StatusBar backgroundColor={colors.primary} style={Platform.select({ ios: "dark", android: 'light' })} />
+      <Toast
+            config={toastConfig}
+          />
     </ThemeProvider>
   );
 }

@@ -47,7 +47,6 @@ axiosInstance.interceptors.request.use((config: any) => {
     return Promise.reject(err);
 });
 
-// Uncomment the following block to handle response errors (e.g., for token expiration)
 // axiosInstance.interceptors.response.use(response => {
 //     return response;
 // }, async error => {

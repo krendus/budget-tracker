@@ -9,13 +9,13 @@ import { useUserStore } from '@/store/user.store'
 import { handleAPIError } from '@/utils/error-handler'
 import { showToast } from '@/utils/toast'
 import { Ionicons } from '@expo/vector-icons'
-import { Link, useRouter } from 'expo-router'
+import { useRouter } from 'expo-router'
 import { observer } from 'mobx-react-lite'
 import React, { useState } from 'react'
 import { Image, ScrollView, StyleSheet, TouchableOpacity, View } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 
-const Login = observer(() => {
+const Register = observer(() => {
   const router = useRouter();
   const { setUser } = useUserStore();
 
@@ -35,15 +35,16 @@ const Login = observer(() => {
     setLoading(true);
     try {
       // Use this when you want to integrate the API
-      // const res = await login(fields);
+      // const res = await register(fields);
+      // console.log(res.data.data);
       // setUser(res.data.data?.user);
       // storage.set("token", res.data.data?.token)
       // remove this when you want to integrate the API. I am just using it for simulation
       await new Promise((resolve) => {
         setTimeout(resolve, 2000)
       })
-      showToast("success", "Login successful")
-      router.replace("/(tabs)/dashboard")
+      showToast("success", "Registration Successful")
+      router.replace("/")
     } catch (error: any) {
       handleAPIError(error);
     } finally {
@@ -51,8 +52,8 @@ const Login = observer(() => {
     }
   }
 
-  const handleGoToRegister = () => {
-    router.replace("/register")
+  const handleGoToLogin = () => {
+    router.replace("/login")
   }
 
   return (
@@ -68,7 +69,7 @@ const Login = observer(() => {
           source={require('@/assets/images/icon.png')}
           style={styles.logo}
         />
-        <Text style={styles.header}>Budget Tracker Login</Text>
+        <Text style={styles.header}>Budget Tracker Register</Text>
         <View style={styles.formContainer}>
           <Input
             value={fields.email}
@@ -97,17 +98,17 @@ const Login = observer(() => {
             isPassword
             showLabel
           />
-          <Link href={"/forgot-password"} style={styles.link}>
-            <Text style={styles.linkText}>Forgot Password?</Text>
-          </Link>
         </View>
         <View>
           <Button
-            title='Login'
+            title='Register'
             loading={loading}
             onPress={handleLogin}
+            buttonStyle={{
+              marginTop: 20
+            }}
           />
-          <Text style={styles.info}>Don't have an account? <Text style={styles.linkText} onPress={handleGoToRegister}>Register</Text></Text>
+          <Text style={styles.info}>Already have an account? <Text style={styles.linkText} onPress={handleGoToLogin}>Login</Text></Text>
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -160,4 +161,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default Login
+export default Register

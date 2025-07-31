@@ -1,4 +1,4 @@
-import colors from '@/constants/colorst';
+import colors from '@/constants/colors';
 import fonts from '@/constants/fonts';
 import React, { useState } from 'react';
 import {

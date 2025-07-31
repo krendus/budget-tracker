@@ -1,4 +1,4 @@
-import colors from '@/constants/colorst';
+import colors from '@/constants/colors';
 import fonts from '@/constants/fonts';
 import { HORIZONTAL_PADDING } from '@/constants/sizes';
 import { StyleSheet } from 'react-native';

@@ -1,4 +1,4 @@
-import colors from '@/constants/colorst';
+import colors from '@/constants/colors';
 import { Feather } from '@expo/vector-icons';
 import React, { useState } from 'react';
 import {

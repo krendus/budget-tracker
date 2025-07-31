@@ -4689,7 +4689,7 @@ lodash.throttle@^4.1.1:
   resolved "https://registry.yarnpkg.com/lodash.throttle/-/lodash.throttle-4.1.1.tgz#c23e91b710242ac70c37f1e1cda9274cc39bf2f4"
   integrity sha512-wIkUCfVKpVsWo3JSZlc+8MB5it+2AN5W8J7YVMST30UrvcQNZ1Okbj+rbVniijTWE6FGYy4XJq/rHkas8qJMLQ==
 
-lodash@^4.17.13:
+lodash@^4.17.13, lodash@^4.17.21:
   version "4.17.21"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
@@ -5629,6 +5629,13 @@ react-native-edge-to-edge@1.6.0:
   resolved "https://registry.yarnpkg.com/react-native-edge-to-edge/-/react-native-edge-to-edge-1.6.0.tgz#2ba63b941704a7f713e298185c26cde4d9e4b973"
   integrity sha512-2WCNdE3Qd6Fwg9+4BpbATUxCLcouF6YRY7K+J36KJ4l3y+tWN6XCqAC4DuoGblAAbb2sLkhEDp4FOlbOIot2Og==
 
+react-native-element-dropdown@^2.12.4:
+  version "2.12.4"
+  resolved "https://registry.yarnpkg.com/react-native-element-dropdown/-/react-native-element-dropdown-2.12.4.tgz#259db84e673b9f4fc03090a54760efd4f4a1456c"
+  integrity sha512-abZc5SVji9FIt7fjojRYrbuvp03CoeZJrgvezQoDoSOrpiTqkX69ix5m+j06W2AVncA0VWvbT+vCMam8SoVadw==
+  dependencies:
+    lodash "^4.17.21"
+
 react-native-gesture-handler@~2.24.0:
   version "2.24.0"
   resolved "https://registry.yarnpkg.com/react-native-gesture-handler/-/react-native-gesture-handler-2.24.0.tgz#b6e1f13ec9bf8dfa5f4911854b6e0d73d882a81a"
@@ -5685,10 +5692,10 @@ react-native-screens@~4.11.1:
     react-native-is-edge-to-edge "^1.1.7"
     warn-once "^0.1.0"
 
-react-native-svg@^15.12.0:
-  version "15.12.0"
-  resolved "https://registry.yarnpkg.com/react-native-svg/-/react-native-svg-15.12.0.tgz#0e2d476961e8b07f8c549fe4489c99b5130dc150"
-  integrity sha512-iE25PxIJ6V0C6krReLquVw6R0QTsRTmEQc4K2Co3P6zsimU/jltcDBKYDy1h/5j9S/fqmMeXnpM+9LEWKJKI6A==
+react-native-svg@15.11.2:
+  version "15.11.2"
+  resolved "https://registry.yarnpkg.com/react-native-svg/-/react-native-svg-15.11.2.tgz#7540e8e1eabc4dcd3b1e35ada5a1d9f1b96d37c4"
+  integrity sha512-+YfF72IbWQUKzCIydlijV1fLuBsQNGMT6Da2kFlo1sh+LE3BIm/2Q7AR1zAAR6L0BFLi1WaQPLfFUC9bNZpOmw==
   dependencies:
     css-select "^5.1.0"
     css-tree "^1.1.3"

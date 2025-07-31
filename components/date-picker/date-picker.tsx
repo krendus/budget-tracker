@@ -1,4 +1,4 @@
-import colors from '@/constants/colorst';
+import colors from '@/constants/colors';
 import React, { useState } from 'react';
 import {
     TouchableOpacity,
